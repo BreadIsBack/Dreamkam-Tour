@@ -23,8 +23,6 @@ html {
   min-width: 320px;
   min-height: 100%;
   font-size: 16px;
-
-  @include footerToBottom;
 }
 
 img {
@@ -38,7 +36,9 @@ a {
 }
 
 .site-container {
-  overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
+  // overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
+
+  @include footerToBottom;
 }
 
 .is-hidden {
@@ -110,4 +110,26 @@ a {
 
 .page--ios .dis-scroll {
   position: relative;
+}
+
+.overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 9;
+  background-color: #fffbed;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+  &--active {
+    opacity: 0.5;
+    visibility: visible;
+  }
+}
+
+.burger {
+  @include burger;
 }

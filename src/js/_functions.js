@@ -6,8 +6,8 @@ import { mobileCheck } from "./functions/mobile-check";
 console.log(mobileCheck())
 
 // Определение ширины экрана
-// import { isMobile, isTablet, isDesktop } from './functions/check-viewport';
-// if (isDesktop()) {
+// import { isMobile, isTablet, isDesktop, isMobileBurger } from './functions/check-viewport';
+// if (isMobileBurger()) {
 //   console.log('...')
 // }
 
@@ -21,13 +21,13 @@ console.log(mobileCheck())
 // import './functions/fix-fullheight';
 
 // Реализация бургер-меню
-// import { burger } from './functions/burger';
+import { burger } from './functions/burger';
 
 // Реализация остановки скролла (не забудьте вызвать функцию)
-// import { disableScroll } from './functions/disable-scroll';
+import { disableScroll } from './functions/disable-scroll';
 
 // Реализация включения скролла (не забудьте вызвать функцию)
-// import { enableScroll } from './functions/enable-scroll';
+import { enableScroll } from './functions/enable-scroll';
 
 // Реализация модального окна
 // import GraphModal from 'graph-modal';

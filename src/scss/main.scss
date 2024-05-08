@@ -4,13 +4,10 @@
 @import "fonts";
 @import "settings";
 
-// подключения компонентов страницы
+// подключения больших компонентов страницы
 @import "./components/header";
+@import "./components/hero";
+// @import "./components/footer";
 
-// тестовые стили, удалите их
-.page__body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: var(--vh);
-}
+// подключения маленьких компонентов страницы
+@import "./components/nav";

@@ -1,6 +1,12 @@
 /* stylelint-disable */
 
 @mixin burger {
+  display: none;
+
+  @include medium-tablet {
+    display: block;
+  }
+
   --burger-width: 30px;
   --burger-height: 30px;
   --burger-line-height: 2px;
@@ -45,6 +51,11 @@
   }
 
   &--active {
+
+    @include mobile {
+      display: block;
+      z-index: 11;
+    }
     &::before {
       top: 50%;
       transform: rotate(45deg);

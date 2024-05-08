@@ -21,3 +21,11 @@ export const isDesktop = () => {
 
   return false;
 };
+
+export const isMobileBurger = () => {
+  if (window.innerWidth <= 576) {
+    return true;
+  }
+
+  return false;
+};
