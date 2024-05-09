@@ -8,6 +8,7 @@ import { isMobileBurger } from '../functions/check-viewport';
   const menu = document?.querySelector('[data-menu]');
   const menuItems = document?.querySelectorAll('[data-menu-item]');
   const overlay = document?.querySelector('[data-menu-overlay]');
+  const menuList = document?.querySelector('[data-menu-list]');
 
   burger?.addEventListener('click', (e) => {
     burger?.classList.toggle('burger--active');
@@ -23,9 +24,16 @@ import { isMobileBurger } from '../functions/check-viewport';
       burger?.setAttribute('aria-label', 'Открыть меню');
       enableScroll();
     }
-    if (isMobileBurger()) {
-      burgerMobile?.classList.toggle('header__btn--active');
+
+    if (menuList.contains(burgerMobile)) {
+      return;
     }
+
+    if (isMobileBurger()) {
+      burgerMobile.classList.toggle('header__btn--mobile')
+      menuList.appendChild(burgerMobile);
+    }
+
   });
 
   overlay?.addEventListener('click', () => {
@@ -36,7 +44,7 @@ import { isMobileBurger } from '../functions/check-viewport';
     overlay.classList.remove('overlay--active');
 
     if (isMobileBurger()) {
-      burgerMobile?.classList.remove('header__btn--active');
+      burgerMobile?.classList.remove('header__btn--mobile');
     }
 
     enableScroll();
@@ -51,7 +59,7 @@ import { isMobileBurger } from '../functions/check-viewport';
       overlay.classList.remove('overlay--active');
 
       if (isMobileBurger()) {
-        burgerMobile?.classList.remove('header__btn--active');
+        burgerMobile?.classList.remove('header__btn--mobile');
       }
 
       enableScroll();

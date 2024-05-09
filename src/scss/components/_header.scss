@@ -69,20 +69,22 @@
       transition: opacity 0.3s ease-in-out;
     }
 
-    @include medium-tablet {
-      margin-right: 25px;
-    }
+    &--mobile {
+      @include medium-tablet {
+        margin-right: 25px;
+      }
 
-    @include mobile {
-      position: fixed;
-      z-index: 11;
-      bottom: 40px;
-      left: calc(50% - 90px);
-      transform: translateX(-1500%);
-      transition: transform 0.3s ease-in-out;
+      @include mobile {
+        position: fixed;
+        z-index: 11;
+        bottom: 40px;
+        left: calc(50% - 90px);
+        transform: translateX(-1500%);
+        transition: transform 0.3s ease-in-out;
 
-      &--active {
-        transform: none;
+        &--active {
+          transform: none;
+        }
       }
     }
   }
