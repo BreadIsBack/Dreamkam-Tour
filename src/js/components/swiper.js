@@ -6,19 +6,6 @@ import Swiper, {
 
 Swiper.use([Autoplay, Pagination, Navigation]);
 
-const bullets = document.querySelectorAll('.swiper-pagination-bullet');
-
-bullets.forEach(bullet => {
-  bullet.setAttribute('tabindex', 0);
-  bullet.addEventListener("keyup", function (event) {
-
-    if (event.keyCode === 9) {
-      bullet.click();
-    }
-
-  })
-});
-
 const swiperHeroBg = new Swiper('.hero__swiper-background', {
   slidesPerView: 1,
   autoplay: {
@@ -27,11 +14,26 @@ const swiperHeroBg = new Swiper('.hero__swiper-background', {
 });
 
 const swiperHero = new Swiper('.swiper-main', {
-  slidesPerView: 1,
+  slidesPerView: 'auto',
+  speed: 500,
+  loop: true,
+  spaceBetween: 35,
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+    pageUpDown: true,
+  },
   navigation: {
-    prevEl: '.portfolio__btn-prev',
-    nextEl: '.portfolio__btn-next',
+    prevEl: '.swiper-main__prev',
+    nextEl: '.swiper-main__next',
     clickable: true,
-    spaceBetween: 10,
+  },
+   breakpoints: {
+    320: {
+      spaceBetween: 17
+    },
+    576: {
+      spaceBetween: 35
+    }
   },
 });

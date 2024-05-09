@@ -1,8 +1,17 @@
 .hero {
+  padding: 163px 0 48px;
   position: relative;
+
+  @include tablet {
+    padding: 163px 0 103px;
+  }
 
   &__container {
     display: flex;
+
+    @include tablet {
+      flex-direction: column;
+    }
   }
 
   &__swiper-background {
@@ -16,11 +25,12 @@
 
   &__swiper-background-img {
     width: 100%;
+    height: 100%;
   }
 
   &__content {
     flex-shrink: 0;
-    max-width: 640px;
+    max-width: 650px;
     color: var(--light-color);
   }
 
@@ -31,6 +41,10 @@
     font-weight: 900;
     font-size: 64px;
     line-height: 100%;
+
+    @include mobile {
+      font-size: 48px;
+    }
   }
 
   &__date {
@@ -46,6 +60,11 @@
     font-weight: 700;
     font-size: 30px;
     line-height: 187%;
+
+    @include mobile {
+      padding: 16px 8px;
+      font-size: 18px;
+    }
   }
 
   &__date-text {
@@ -59,13 +78,22 @@
     max-width: 385px;
     font-size: 20px;
     line-height: 140%;
+
+    @include mobile {
+      font-size: 18px;
+    }
   }
 
   &__link {
+    margin-bottom: 171px;
     padding-right: 82px;
+    display: inline-block;
     position: relative;
     color: var(--light-color);
     transition: color 0.3s ease-in-out;
+    font-size: 18px;
+    line-height: 133%;
+    text-decoration: underline;
 
     &:hover {
       color: var(--orange-color);
@@ -87,6 +115,15 @@
       width: 64px;
       height: 64px;
       transition: border-color 0.3s ease-in-out;
+
+      @include mobile {
+        width: 48px;
+        height: 48px;
+      }
+    }
+
+    @include tablet {
+      margin-bottom: 75px;
     }
   }
 
@@ -98,5 +135,49 @@
     width: 24px;
     height: 12px;
     fill: currentColor;
+
+    @include mobile {
+      right: 13px;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+
+    @include tablet {
+      position: absolute;
+      right: 50px;
+      bottom: 42px;
+    }
+  }
+
+  &__social-item {
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+  }
+
+  &__social-link {
+    color: var(--light-color);
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: var(--orange-color);
+    }
+  }
+
+  &__social-svg {
+    width: 18px;
+    height: 20px;
+    fill: currentColor;
+  }
+
+  &__swiper {
+    align-self: flex-end;
+  }
+
+  &__slide {
+    position: relative;
   }
 }

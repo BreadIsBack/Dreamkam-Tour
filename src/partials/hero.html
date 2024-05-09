@@ -4,13 +4,29 @@
       <div class="swiper-slide">
         <picture>
           <source srcset="./img/hero/hero-bg-1.webp" type="image/webp">
-          <img loading="lazy" src="./img/hero/hero-bg-1.png" class="hero__swiper-background-img image"  alt="Горы камчатки">
+          <img loading="lazy" src="./img/hero/hero-bg-1.png" class="hero__swiper-background-img image"
+            alt="Горы камчатки">
         </picture>
       </div>
       <div class="swiper-slide">
         <picture>
           <source srcset="./img/hero/hero-bg-2.webp" type="image/webp">
-          <img loading="lazy" src="./img/hero/hero-bg-2.png" class="hero__swiper-background-img image" width="1440" height="900" alt="Горы камчатки">
+          <img loading="lazy" src="./img/hero/hero-bg-2.png" class="hero__swiper-background-img image" width="1440"
+            height="900" alt="Горы камчатки">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture>
+          <source srcset="./img/hero/hero-bg-3.webp" type="image/webp">
+          <img loading="lazy" src="./img/hero/hero-bg-3.png" class="hero__swiper-background-img image" width="1440"
+            height="900" alt="Медведи на фоне гор">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture>
+          <source srcset="./img/hero/hero-bg-4.webp" type="image/webp">
+          <img loading="lazy" src="./img/hero/hero-bg-4.png" class="hero__swiper-background-img image" width="1440"
+            height="900" alt="Горы Камчатки">
         </picture>
       </div>
     </div>
@@ -20,10 +36,8 @@
     <div class="hero__content">
       <h1 class="hero__title">Мечты о далекой Камчатке - близко</h1>
       <div class="hero__date">
-        <time datetime="23-06">23.06</time>
-        <span class="hero__soan">-</span>
-        <time datetime="04-07">04.07</time>
-        <p class="hero__date-text">DREAM TOUR</p>
+        <p class="hero__date-text"><time class="hero__time" datetime="23-06">23.06 </time><span
+            class="hero__soan">-</span><time class="hero__time" datetime="04-07"> 04.07 </time>DREAM TOUR</p>
       </div>
       <p class="hero__text">
         Тур перевернет ваш мир с ног на голову и оставит впечатления на всю жизнь.
@@ -51,19 +65,45 @@
       </ul>
     </div>
     <div class="swiper swiper-main hero__swiper">
-      <div class="swiper-wrapper hero__swiper-wrapper">
+      <div class="swiper-wrapper swiper-main__wrapper hero__swiper-wrapper">
         <div class="swiper-slide hero__slide">
-          <img src="./img/hero/slider-1.jpg" alt="Человек на фоне гор" class="swiper-main__img" width="212" height="210">
+          <button class="swiper-main__btn btn-reset">
+            <img src="./img/hero/slide-1.png" alt="Человек на фоне гор" class="swiper-main__img" width="210"
+              height="208">
+            <p class="swiper-main__text">Восхождение</p>
+          </button>
         </div>
         <div class="swiper-slide hero__slide">
-          <img src="./img/hero/slider-2.jpg" alt="Медведь и медведица" class="swiper-main__img" width="212" height="210">
+          <button class="swiper-main__btn btn-reset">
+            <img src="./img/hero/slide-2.png" alt="Медведь и медведица" class="swiper-main__img" width="210"
+              height="208">
+            <p class="swiper-main__text">Медведи</p>
+          </button>
         </div>
         <div class="swiper-slide hero__slide">
-          <img src="./img/hero/slider-3.jpg" alt="Скалистый берег" class="swiper-main__img" width="212" height="210">
+          <button class="swiper-main__btn btn-reset">
+            <img src="./img/hero/slide-3.png" alt="Скалистый берег" class="swiper-main__img" width="210" height="208">
+            <p class="swiper-main__text">Скалистый берег</p>
+          </button>
+        </div>
+        <div class="swiper-slide hero__slide">
+          <button class="swiper-main__btn btn-reset">
+            <img src="./img/hero/slide-1.png" alt="Человек на фоне гор" class="swiper-main__img" width="210"
+              height="208">
+            <p class="swiper-main__text">Восхождение</p>
+          </button>
         </div>
       </div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev swiper-main__prev">
+        <svg class="swiper-main__svg">
+          <use xlink:href="img/sprite.svg#arrow-slide"></use>
+        </svg>
+      </div>
+      <div class="swiper-button-next swiper-main__next">
+        <svg class="swiper-main__svg">
+          <use xlink:href="img/sprite.svg#arrow-slide"></use>
+        </svg>
+      </div>
     </div>
   </div>
 </section>
