@@ -65,4 +65,13 @@ import { isMobileBurger } from '../functions/check-viewport';
       enableScroll();
     });
   });
+
+  burgerMobile.addEventListener('click', () => {
+    burger?.setAttribute('aria-expanded', 'false');
+    burger?.setAttribute('aria-label', 'Открыть меню');
+    burger.classList.remove('burger--active');
+    menu.classList.remove('header__nav--active');
+    overlay.classList.remove('overlay--active');
+    enableScroll();
+  });
 })();

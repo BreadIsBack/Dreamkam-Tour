@@ -30,8 +30,8 @@ import { disableScroll } from './functions/disable-scroll';
 import { enableScroll } from './functions/enable-scroll';
 
 // Реализация модального окна
-// import GraphModal from 'graph-modal';
-// const modal = new GraphModal();
+import GraphModal from 'graph-modal';
+const modal = new GraphModal();
 
 // Реализация табов
 // import GraphTabs from 'graph-tabs';
@@ -65,8 +65,8 @@ import { enableScroll } from './functions/enable-scroll';
 // const rellax = new Rellax('.rellax');
 
 // Подключение плавной прокрутки к якорям
-// import SmoothScroll from 'smooth-scroll';
-// const scroll = new SmoothScroll('a[href*="#"]');
+import SmoothScroll from 'smooth-scroll';
+const scroll = new SmoothScroll('a[href*="#"]');
 
 // Подключение событий свайпа на мобильных
 // import 'swiped-events';

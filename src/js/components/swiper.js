@@ -1,3 +1,4 @@
+import { init } from 'aos';
 import Swiper, {
   Pagination,
   Navigation,
@@ -34,6 +35,12 @@ const swiperHero = new Swiper('.swiper-main', {
     },
     576: {
       spaceBetween: 35
+    }
+  },
+
+  on: {
+    slideChange: function () {
+
     }
   },
 });
