@@ -1,8 +1,66 @@
 <div class="graph-modal">
-  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-booking">
+  <div class="graph-modal__container graph-modal__container--booking" role="dialog" aria-modal="true"
+    data-graph-target="modal-booking">
     <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
-    <div class="graph-modal__content">
-      
+    <div class="modal-booking">
+      <div class="modal-booking__content">
+        <h2 class="modal-booking__title">Онлайн-заявка</h2>
+        <form method="post" action="https://my-json-server.typicode.com/typicode/demo/posts"
+          class="modal-booking__form">
+          <div class="modal-booking__person-info">
+            <div class="modal-booking__person-wrapper">
+              <h3 class="modal-booking__person-title modal-booking__subtitle">Имя участника</h3>
+              <label class="modal-booking__label modal-booking__label--info">
+                <input type="text" class="modal-booking__input modal-booking__input--info input-reset" name="Имя"
+                  placeholder="Имя" required>
+              </label>
+            </div>
+            <div class="modal-booking__person-wrapper">
+              <h3 class="modal-booking__person-title modal-booking__subtitle">Количество человек</h3>
+              <label class="modal-booking__label modal-booking__label--info">
+                <input type="number" class="modal-booking__input modal-booking__input--info input-reset"
+                  name="Количество" placeholder="1" min="0" required>
+              </label>
+            </div>
+          </div>
+          <div class="modal-booking__tariffs">
+            <h3 class="modal-booking__tariffs-title modal-booking__subtitle">Тариф</h3>
+            <label class="modal-booking__label modal-booking__tariffs-label">Базовый (для камчадал)
+              <input type="radio" class="modal-booking__input modal-booking__tariffs-input input-reset" name="Тариф"
+                value="Базовый (для камчадал)" required checked>
+              <span class="modal-booking__tariffs-span"></span>
+              <span class="modal-booking__tariffs-price">79 000 руб</span>
+            </label>
+            <label class="modal-booking__label modal-booking__tariffs-label">Базовый + проживание
+              <input type="radio" class="modal-booking__input modal-booking__tariffs-input input-reset" name="Тариф"
+                value="Базовый + проживание" required>
+              <span class="modal-booking__tariffs-span"></span>
+              <span class="modal-booking__tariffs-price">99 000 руб</span>
+            </label>
+            <label class="modal-booking__label modal-booking__tariffs-label">Базовый + проживание + долина гейзеров
+              <input type="radio" class="modal-booking__input modal-booking__tariffs-input input-reset" name="Тариф"
+                value="Базовый + проживание + долина гейзеров" required>
+              <span class="modal-booking__tariffs-span"></span>
+              <span class="modal-booking__tariffs-price">179 000 руб</span>
+            </label>
+          </div>
+          <div class="modal-booking__date">
+            <h3 class="modal-booking__date-title modal-booking__subtitle">Даты тура</h3>
+            <label class="modal-booking__label modal-booking__label-date">
+              <input id="test" type="date" class="modal-booking__input modal-booking__input-date input-reset"
+                name="Дата тура" min="2024-06-23" max="2024-07-04" required>
+            </label>
+          </div>
+          <div class="modal-booking__comment">
+            <h3 class="modal-booking__comment-title modal-booking__subtitle">Комментарий</h3>
+            <label class="modal-booking__label modal-booking__label-comment">
+              <textarea class="modal-booking__textarea input-reset" name="Комментарий"
+                placeholder="Введите ваш комментарий здесь"></textarea>
+            </label>
+          </div>
+          <button class="modal-booking__btn btn-reset btn">Отправить заявку</button>
+        </form>
+      </div>
     </div>
   </div>
 </div>

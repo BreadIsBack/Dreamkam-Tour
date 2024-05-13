@@ -2,14 +2,17 @@
 // colors
 :root {
   // base
-  --font-family: "Lato", sans-serif;
+  --font-family: "Lato";
   --content-width: 1370px;
   --container-offset: 15px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
   // colors
   --light-color: #fff;
-  --main-color: #313131;
   --green-color: #275553;
+  --main-color: #313131;
+  --dark-color: #212121;
+  --dark-grey-color: #5a5a5a;
+  --grey-color: #bababa;
   --orange-color: #f47648;
 }
