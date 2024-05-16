@@ -1,0 +1,171 @@
+.about {
+  padding: 120px 0 147px;
+  position: relative;
+  overflow: hidden;
+  background-image: url('../img/about/about-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+
+  &::before {
+    position: absolute;
+    content: url('../img/about/airplane.png');
+    top: 57%;
+    right: -180px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+  }
+
+  // &::after {
+  //   position: absolute;
+  //   content: '';
+  //   left: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   height: 725px;
+  //   background: linear-gradient(0deg, #000 10.42%, rgba(0, 0, 0, 0.63) 59.38%, rgba(0, 0, 0, 0) 100%);
+  // }
+
+  &__title {
+    margin: 0;
+    position: absolute;
+    top: 52%;
+    right: -70px;
+    font-family: 'Roboto';
+    font-weight: 900;
+    // font-size: 200px;
+    font-size: clamp(1rem, 5rem, 10rem);
+    line-height: 52%;
+    color: #000;
+    text-transform: uppercase;
+    opacity: 0.2;
+    text-shadow: 0 6px 14px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  &__top {
+    margin-bottom: 350px;
+  }
+
+  &__top-wrapper {
+    max-width: 728px;
+  }
+
+  &__top-title {
+    margin: 0;
+    margin-bottom: 27px;
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 117%;
+  }
+
+  &__descr {
+    margin: 0;
+    margin-bottom: 35px;
+    font-size: 24px;
+    line-height: 133%;
+  }
+
+  &__text {
+    margin: 0;
+    margin-bottom: 64px;
+    line-height: 150%;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    padding-top: 40px;
+    position: relative;
+
+    &:not(:last-child) {
+      margin-right: 64px;
+    }
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 32px;
+      height: 32px;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &--level {
+      &::before {
+        content: url('../img/about/level.svg');
+      }
+    }
+
+    &--calendar {
+      &::before {
+        content: url('../img/about/calendar.svg');
+      }
+    }
+
+    &--clock {
+      &::before {
+        content: url('../img/about/clock.svg');
+      }
+    }
+
+    &--building {
+      &::before {
+        content: url('../img/about/building.svg');
+      }
+    }
+  }
+
+  &__item-title {
+    margin: 0;
+    font-family: 'Montserrat';
+    line-height: 171%;
+    color: var(--dark-grey-color);
+  }
+
+  &__item-descr {
+    margin: 0;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+  }
+
+  &__bottom {
+    max-width: 662px;
+    color: var(--light-color);
+  }
+
+  &__bottom-title {
+    margin: 0;
+    margin-bottom: 32px;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 133%;
+  }
+
+  &__blockquote {
+    margin: 0;
+  }
+
+  &__blockquote-text {
+    margin: 0;
+    margin-bottom: 13px;
+    max-width: 300px;
+    font-weight: 300;
+    color: #dedede;
+  }
+
+  &__author {
+    margin: 0;
+    font-weight: 500;
+
+    span {
+      text-decoration: underline;
+    }
+  }
+}
