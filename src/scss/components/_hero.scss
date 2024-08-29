@@ -177,7 +177,16 @@
     align-self: flex-end;
   }
 
+  &__swiper-wrapper {
+    height: 268px;
+  }
+
   &__slide {
     position: relative;
+  }
+
+  &__text-box {
+    left: 12px;
+    bottom: 12px;
   }
 }

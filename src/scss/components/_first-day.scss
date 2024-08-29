@@ -1,0 +1,124 @@
+.first-day {
+  background-color: #000;
+  position: relative;
+  background-image: url('../img/first-day/first-day-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.31) 66.32%, rgba(0, 0, 0, 0) 100%);
+  }
+
+  // &::after {
+  //   position: absolute;
+  //   content: '';
+  //   height: 300px;
+  //   left: 0;
+  //   right: 0;
+  //   bottom: -250px;
+  //   background-image: url('../img/first-day/first-day-bg-clouds.svg');
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    @include tablet {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 48px;
+    }
+  }
+
+  &__content {
+    flex-shrink: 0;
+    max-width: 488px;
+    color: var(--light-color);
+
+    @include tablet {
+      max-width: 100%;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 48px;
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 125%;
+
+    span {
+      color: var(--orange-color);
+    }
+
+    @include mobile {
+      font-size: 24px;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    line-height: 150%;
+    color: var(--text-color);
+
+    span {
+      font-weight: 600;
+      color: var(--light-color);
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 35px;
+    }
+  }
+
+  &__slider-wrapper {
+    margin-top: 84px;
+    max-width: 705px;
+
+    @include tablet {
+      margin-top: 0;
+      max-width: 100%;
+    }
+  }
+
+  &__swiper-wrapper {
+    height: 320px;
+  }
+
+  &__slide {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 160px;
+      background: rgba(0, 0, 0, 0) linear-gradient(0deg, #000 1.71%, rgba(0, 0, 0, 0.4) 30%, rgba(0, 0, 0, 0) 100%);
+    }
+  }
+
+  &__text-box {
+    padding: 0 16px 24px;
+    text-align: left;
+    left: 12px;
+    bottom: 0;
+    z-index: 10;
+  }
+
+  &__slide-text {
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--grey-color);
+  }
+}

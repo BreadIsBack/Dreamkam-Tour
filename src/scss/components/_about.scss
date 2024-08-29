@@ -2,10 +2,6 @@
   padding: 120px 0 147px;
   position: relative;
   overflow: hidden;
-  background-image: url('../img/about/about-bg.jpg');
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: bottom;
 
   &::before {
     position: absolute;
@@ -15,6 +11,42 @@
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 1;
+
+    @include mobile {
+      left: 0;
+    }
+  }
+
+  ::after {
+    position: absolute;
+    content: '';
+    background-image: url('../img/about/about-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 15% 10%;
+    top: 410px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -10;
+
+    @include small-tablet {
+      background-position: 30% 10%;
+    }
+
+    @include mobile {
+      background-position: 30% 30%;
+      top: 550px;
+    }
+
+    @include mini {
+      background-position: 30% 30%;
+    }
+
+    @include smallest {
+      background-position: 30% 30%;
+      top: 770px;
+    }
   }
 
   // &::after {
@@ -31,16 +63,21 @@
     margin: 0;
     position: absolute;
     top: 52%;
-    right: -70px;
+    right: -5px;
     font-family: 'Roboto';
     font-weight: 900;
     // font-size: 200px;
-    font-size: clamp(1rem, 5rem, 10rem);
+    // font-size: clamp(1rem, 5rem, 10rem);
+    font-size: 8rem;
     line-height: 52%;
     color: #000;
     text-transform: uppercase;
     opacity: 0.2;
     text-shadow: 0 6px 14px 0 rgba(0, 0, 0, 0.25);
+
+    @include small-tablet {
+      display: none;
+    }
   }
 
   &__top {
@@ -74,16 +111,32 @@
   }
 
   &__list {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, max-content);
+    gap: 54px;
+
+    @include small-tablet {
+      gap: 40px;
+      grid-template-columns: repeat(2, max-content);
+      justify-content: left;
+    }
+
+    @include mobile {
+      // grid-template-columns: repeat(4, max-content);
+      gap: 20px;
+      justify-content: center;
+    }
   }
 
   &__item {
     padding-top: 40px;
     position: relative;
+    color: var(--dark-color);
+    white-space: nowrap;
 
-    &:not(:last-child) {
-      margin-right: 64px;
-    }
+    // &:not(:last-child) {
+    //   margin-right: 64px;
+    // }
 
     &::before {
       position: absolute;
@@ -93,6 +146,7 @@
       height: 32px;
       background-repeat: no-repeat;
       background-size: cover;
+      // background-position: right;
     }
 
     &--level {
@@ -122,15 +176,15 @@
 
   &__item-title {
     margin: 0;
+    font-size: 14px;
     font-family: 'Montserrat';
+    font-weight: 400;
     line-height: 171%;
-    color: var(--dark-grey-color);
   }
 
   &__item-descr {
     margin: 0;
     font-weight: 700;
-    font-size: 16px;
     line-height: 150%;
   }
 
@@ -146,6 +200,11 @@
     font-weight: 600;
     font-size: 24px;
     line-height: 133%;
+
+    @include mobile {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
   }
 
   &__blockquote {

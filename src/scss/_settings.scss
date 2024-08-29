@@ -143,3 +143,44 @@ a {
   background-color: red;
   z-index: 100;
 }
+
+.text-circle {
+  padding-left: 64px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 5px;
+    width: 32px;
+    height: 32px;
+    border: 3px solid #6c6c6c;
+    border-radius: 50%;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    left: 8px;
+    right: 0;
+    top: 13px;
+    bottom: 0;
+    width: 16px;
+    height: 16px;
+    background-color: var(--orange-color);
+    border-radius: 50%;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  @include tablet {
+    padding-left: 0;
+  }
+}
