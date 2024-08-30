@@ -45,6 +45,7 @@
     color: var(--light-color);
 
     @include tablet {
+      padding-right: 15px;
       max-width: 100%;
     }
   }

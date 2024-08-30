@@ -94,6 +94,14 @@ a {
   max-width: var(--container-width);
 }
 
+.container-swiper-right {
+  padding-left: max(15px, calc((100% - var(--content-width)) / 2));
+}
+
+.container-swiper-left {
+  padding-right: max(15px, calc((100% - var(--content-width)) / 2));
+}
+
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;
 }

@@ -21,24 +21,50 @@
   &::after {
     position: absolute;
     content: '';
-    height: 150px;
-    top: -134px;
+    height: 300px;
+    top: -116px;
     left: 0;
     right: 0;
     bottom: 0;
     background-image: url('../img/first-day/first-day-bg-clouds.png');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: bottom center;
+  }
+
+  @include tablet {
+    background-size: 600px;
+    background-position: right 40%;
+  }
+
+  @include small-tablet {
+    background-size: 500px;
+    background-position: right 40%;
+  }
+
+  @include mobile {
+    padding: 60px 0 65px;
+    background-image: none;
   }
 
   &__title {
     margin: 0;
     margin-bottom: 48px;
     max-width: 856px;
+    position: relative;
+    z-index: 10;
+  }
+
+  &__container-content {
+    padding-left: max(15px, calc((100% - var(--content-width))));
   }
 
   &__content {
     margin-bottom: 64px;
+
+    @include medium-tablet {
+      margin-bottom: 48px;
+    }
   }
 
   &__content-text {
@@ -53,6 +79,7 @@
   &__slider-container {
     display: flex;
     justify-content: space-between;
+    gap: 35px;
   }
 
   &__slider-wrapper {

@@ -35,18 +35,16 @@
     }
 
     @include mobile {
-      background-position: 30% 30%;
       top: 550px;
     }
 
-    @include mini {
-      background-position: 30% 30%;
-    }
-
     @include smallest {
-      background-position: 30% 30%;
       top: 770px;
     }
+  }
+
+  @include mobile {
+    padding: 38px 0 34px;
   }
 
   // &::after {
@@ -95,6 +93,10 @@
     font-weight: 700;
     font-size: 48px;
     line-height: 117%;
+
+    @include mobile {
+      font-size: 32px;
+    }
   }
 
   &__descr {
@@ -102,6 +104,10 @@
     margin-bottom: 35px;
     font-size: 24px;
     line-height: 133%;
+
+    @include mobile {
+      font-size: 20px;
+    }
   }
 
   &__text {

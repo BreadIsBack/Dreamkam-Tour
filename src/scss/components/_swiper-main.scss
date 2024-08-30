@@ -116,21 +116,11 @@
     svg {
       transform: rotate(180deg);
     }
-
-    &--right {
-      left: auto;
-      right: 54px;
-    }
   }
 
   &__next {
     // right: auto;
     left: 54px;
-
-    &--right {
-      left: auto;
-      right: 0;
-    }
   }
 
   &__svg {
@@ -155,6 +145,17 @@
     @include mobile {
       &:not(:last-child) {
         margin-right: 16px;
+      }
+    }
+
+    &--second-day {
+      &:not(:last-child) {
+        margin-right: 0;
+        margin-left: 32px;
+
+        @include mobile {
+          margin-left: 15px;
+        }
       }
     }
   }
@@ -190,4 +191,31 @@
     height: 100%;
     transition: all 0.5s ease-in-out;
   }
+}
+
+
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after,
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+  content: '';
+}
+
+// .swiper-button-prev, .swiper-rtl .swiper-button-next {
+//   left: auto;
+//   right: 0;
+// }
+
+// .swiper-button-next, .swiper-rtl .swiper-button-prev {
+//   left: auto;
+//   right: 54px;
+// }
+
+.swiper-rtl .swiper-button-next {
+  left: auto;
+  right: 0;
+}
+
+
+ .swiper-rtl .swiper-button-prev {
+  left: auto;
+  right: 54px;
 }

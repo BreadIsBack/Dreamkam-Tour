@@ -3,14 +3,11 @@
   position: relative;
 
   @include tablet {
-    padding: 163px 0 103px;
+    padding: 163px 0 16px;
   }
 
   &__container {
     display: flex;
-    max-width: 100%;
-    padding-left: max(15px, calc((100% - 1250px) / 2));
-    padding-right: 0;
 
     @include tablet {
       flex-direction: column;
