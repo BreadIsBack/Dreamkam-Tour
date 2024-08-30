@@ -45,7 +45,8 @@ a {
 }
 
 .is-hidden {
-  display: none !important; /* stylelint-disable-line declaration-no-important */
+  display: none !important;
+  /* stylelint-disable-line declaration-no-important */
 }
 
 .btn-reset {
@@ -182,5 +183,20 @@ a {
 
   @include tablet {
     padding-left: 0;
+  }
+}
+
+.days-title {
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 125%;
+
+  span {
+    color: var(--orange-color);
+  }
+
+  @include mobile {
+    font-size: 24px;
   }
 }

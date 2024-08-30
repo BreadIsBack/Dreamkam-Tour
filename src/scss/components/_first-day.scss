@@ -1,4 +1,5 @@
 .first-day {
+  padding-bottom: 195px;
   background-color: #000;
   position: relative;
   background-image: url('../img/first-day/first-day-bg.jpg');
@@ -51,18 +52,6 @@
   &__title {
     margin: 0;
     margin-bottom: 48px;
-    font-family: "Inter";
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 125%;
-
-    span {
-      color: var(--orange-color);
-    }
-
-    @include mobile {
-      font-size: 24px;
-    }
   }
 
   &__text {
@@ -92,32 +81,5 @@
 
   &__swiper-wrapper {
     height: 320px;
-  }
-
-  &__slide {
-    position: relative;
-
-    &::after {
-      position: absolute;
-      content: '';
-      left: 0;
-      right: 0;
-      bottom: 0;
-      height: 160px;
-      background: rgba(0, 0, 0, 0) linear-gradient(0deg, #000 1.71%, rgba(0, 0, 0, 0.4) 30%, rgba(0, 0, 0, 0) 100%);
-    }
-  }
-
-  &__text-box {
-    padding: 0 16px 24px;
-    text-align: left;
-    left: 12px;
-    bottom: 0;
-    z-index: 10;
-  }
-
-  &__slide-text {
-    font-weight: 400;
-    color: var(--grey-color);
   }
 }

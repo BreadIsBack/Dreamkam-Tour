@@ -4,14 +4,15 @@
 @import "fonts";
 @import "settings";
 
+// подключения маленьких компонентов страницы
+@import "./components/nav";
+@import "./components/swiper-main";
+@import "./components/modals";
+
 // подключения больших компонентов страницы
 @import "./components/header";
 @import "./components/hero";
 @import "./components/about";
 @import "./components/first-day";
+@import "./components/second-day";
 // @import "./components/footer";
-
-// подключения маленьких компонентов страницы
-@import "./components/nav";
-@import "./components/swiper-main";
-@import "./components/modals";

@@ -15,14 +15,10 @@ const swiperHeroBg = new Swiper('.hero__swiper-background', {
   loop: true,
 });
 
-const controlSearch = () => {
-document.querySelectorAll('.swiper-main__prev');
-
-}
-
 const swiperHero = new Swiper('.swiper-main', {
 
   slidesPerView: 'auto',
+  allowTouchMove:false,
   speed: 500,
   loop: true,
   keyboard: {
@@ -51,4 +47,3 @@ const swiperHero = new Swiper('.swiper-main', {
     }
   },
 });
-
