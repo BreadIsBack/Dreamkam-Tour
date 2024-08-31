@@ -15,6 +15,8 @@ const swiperHeroBg = new Swiper('.hero__swiper-background', {
   loop: true,
 });
 
+
+// const activeSlides = document.querySelectorAll('.swiper-slide-active');
 const swiperHero = new Swiper('.swiper-main', {
 
   slidesPerView: 'auto',
@@ -26,7 +28,6 @@ const swiperHero = new Swiper('.swiper-main', {
     onlyInViewport: true,
     pageUpDown: true,
   },
-
   navigation: {
     prevEl: '.swiper-main__prev',
     nextEl: '.swiper-main__next',
@@ -43,6 +44,10 @@ const swiperHero = new Swiper('.swiper-main', {
 
   on: {
     slideChange: function () {
+
+      // activeSlides.forEach((slide) => {
+      //   slide.style.width = '290';
+      // })
 
     }
   },
