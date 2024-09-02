@@ -3,6 +3,14 @@
   padding-bottom: 58px;
   width: 100%;
 
+  &--third-day {
+    padding-bottom: 92px;
+
+    @include mobile {
+      padding-bottom: 58px;
+    }
+  }
+
   &__wrapper {
     align-items: flex-end;
   }
@@ -27,7 +35,6 @@
 
   &__img {
     display: block;
-    // height: 209px;
     height: 100%;
   }
 
@@ -159,6 +166,28 @@
         }
       }
     }
+
+    &--third-day {
+      &:not(:last-child) {
+        margin-right: 0;
+        margin-left: 32px;
+
+        @include mobile {
+          margin-left: 15px;
+        }
+      }
+    }
+
+    &--fifth-day {
+      &:not(:last-child) {
+        margin-right: 0;
+        margin-left: 32px;
+
+        @include mobile {
+          margin-left: 15px;
+        }
+      }
+    }
   }
 }
 
@@ -181,7 +210,6 @@
 .swiper-slide-active.hero__slide {
   .swiper-main__img {
     width: 269px;
-    height: 100%;
     transition: all 0.5s ease-in-out;
   }
 }
@@ -195,8 +223,10 @@
 }
 
 
-.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after,
-.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after,
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
   content: '';
 }
 
@@ -215,8 +245,18 @@
   right: 0;
 }
 
-
- .swiper-rtl .swiper-button-prev {
+.swiper-rtl .swiper-button-prev {
   left: auto;
   right: 54px;
 }
+
+.swiper-rtl .swiper-button-prev--third-day.swiper-button-prev {
+  left: 40px;
+  right: auto;
+}
+
+.swiper-rtl .swiper-button-next--third-day.swiper-button-next {
+  left: 94px;
+  right: auto;
+}
+

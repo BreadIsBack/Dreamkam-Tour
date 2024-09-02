@@ -48,8 +48,6 @@
   }
 
   &__title {
-    margin: 0;
-    margin-bottom: 48px;
     max-width: 856px;
     position: relative;
     z-index: 10;
@@ -77,24 +75,12 @@
   }
 
   &__slider-container {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 478px;
     gap: 35px;
   }
 
-  &__slider-wrapper {
-    // margin-top: 84px;
-    max-width: 831px;
-
-    @include tablet {
-      // margin-top: 0;
-      // max-width: 100%;
-    }
-  }
-
   &__swiper-wrapper {
-    // height: 390px;
-    // margin-left: 180px;
     align-items: flex-start;
 
     *img {
@@ -108,17 +94,7 @@
   }
 
   &__descr {
-    // margin-top: 100px;
     margin-bottom: 58px;
-    max-width: 478px;
     align-self: flex-end;
-  }
-
-  &__descr-text {
-    margin: 0;
-
-    &:not(:last-child) {
-      margin-bottom: 30px;
-    }
   }
 }

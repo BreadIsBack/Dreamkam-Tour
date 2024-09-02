@@ -154,18 +154,19 @@ a {
 }
 
 .text-circle {
-  padding-left: 64px;
+  // padding-left: 64px;
   position: relative;
 
   &::before {
     position: absolute;
     content: '';
-    left: 0;
+    left: -65px;
     top: 5px;
     width: 32px;
     height: 32px;
     border: 3px solid #6c6c6c;
     border-radius: 50%;
+    z-index: 100;
 
     @include tablet {
       display: none;
@@ -175,7 +176,7 @@ a {
   &::after {
     position: absolute;
     content: '';
-    left: 8px;
+    left: -58px;
     right: 0;
     top: 13px;
     bottom: 0;
@@ -195,6 +196,8 @@ a {
 }
 
 .days-title {
+  margin: 0;
+  margin-bottom: 48px;
   font-family: "Inter";
   font-weight: 700;
   font-size: 40px;
@@ -206,5 +209,21 @@ a {
 
   @include mobile {
     font-size: 24px;
+  }
+
+  @include small-tablet {
+    margin-bottom: 32px;
+  }
+
+  @include mobile {
+    margin-bottom: 24px;
+  }
+}
+
+.days-text {
+  margin: 0;
+
+  &:not(:last-child) {
+    margin-bottom: 32px;
   }
 }

@@ -1,0 +1,29 @@
+.fifth-day {
+  padding-bottom: 191px;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 536px;
+    gap: 226px;
+  }
+
+  &__swiper-wrapper {
+    *img {
+      width: 283px;
+      height: 283px;
+    }
+  }
+
+  &__slider-wrapper {
+    // max-width: 576px;
+  }
+
+  &__title {
+    color: var(--light-color);
+  }
+
+  &__content-text {
+    max-width: 461px;
+    color: var(--light-color);
+  }
+}
