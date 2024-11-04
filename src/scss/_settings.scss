@@ -154,13 +154,12 @@ a {
 }
 
 .text-circle {
-  // padding-left: 64px;
   position: relative;
 
   &::before {
     position: absolute;
     content: '';
-    left: -65px;
+    left: -64px;
     top: 5px;
     width: 32px;
     height: 32px;
@@ -176,7 +175,7 @@ a {
   &::after {
     position: absolute;
     content: '';
-    left: -58px;
+    left: -56px;
     right: 0;
     top: 13px;
     bottom: 0;
@@ -225,5 +224,23 @@ a {
 
   &:not(:last-child) {
     margin-bottom: 32px;
+  }
+}
+
+.clouds {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: '';
+    height: 300px;
+    top: -116px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../img/clouds.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
   }
 }

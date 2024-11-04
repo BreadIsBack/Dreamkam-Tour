@@ -1,21 +1,45 @@
 .fifth-day {
-  padding-bottom: 191px;
+  padding-bottom: 90px;
+
+  @include mobile {
+    padding-bottom: 48px;
+  }
 
   &__container {
     display: grid;
-    grid-template-columns: 1fr 536px;
+    grid-template-columns: 1fr minmax(288px, 536px);
     gap: 226px;
-  }
 
-  &__swiper-wrapper {
-    *img {
-      width: 283px;
-      height: 283px;
+    @include tablet {
+      gap: 48px;
+    }
+
+    @include small-tablet {
+      grid-template-columns: 1fr;
+    }
+
+    @include mobile {
+      gap: 24px;
     }
   }
 
-  &__slider-wrapper {
-    // max-width: 576px;
+  &__swiper-wrapper {
+    margin-top: 40px;
+
+    @include small-tablet {
+      margin-top: 0;
+    }
+  }
+
+  &__descr {
+
+    @include tablet {
+      padding-left: 15px;
+    }
+
+    @include small-tablet {
+      order: -1;
+    }
   }
 
   &__title {
@@ -23,7 +47,6 @@
   }
 
   &__content-text {
-    max-width: 461px;
     color: var(--light-color);
   }
 }

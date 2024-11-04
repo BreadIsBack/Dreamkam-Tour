@@ -1,0 +1,78 @@
+.seventh-day {
+  padding-top: 111px;
+
+  &__container {
+    padding-left: max(15px,(100% - var(--content-width)) / 2);
+  }
+
+  &__container-content {
+    margin-bottom: 57px;
+    display: flex;
+    justify-content: space-between;
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__content {
+    // display: grid;
+    // grid-template-columns: repeat(12, 1fr);
+  }
+
+  &__picture-box {
+    img {
+      width: 100%;
+
+      @include mobile {
+        display: block;
+        margin-left: auto;
+      }
+    }
+  }
+
+  &__title {
+    max-width: 644px;
+    position: relative;
+    z-index: 10;
+
+    @include medium-tablet {
+      padding-right: 15px;
+      max-width: 100%;
+    }
+  }
+
+  &__content-text {
+    max-width: 548px;
+    margin: 0;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    @include medium-tablet {
+      padding-right: 15px;
+      // max-width: 100%;
+    }
+  }
+
+  &__slider-container {
+    display: grid;
+    grid-template-columns: 1fr minmax(287px, 481px);
+    gap: 32px;
+
+    @include medium-tablet {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__descr {
+    padding-left: 15px;
+  }
+
+  &__descr-text {
+    span {
+      text-decoration: underline;
+    }
+  }
+}

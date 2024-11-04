@@ -1,0 +1,19 @@
+.social {
+  display: flex;
+  gap: 35px;
+
+  &__link {
+    color: var(--main-color);
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: var(--orange-color);
+    }
+
+    svg {
+      width: 23px;
+      height: 23px;
+      fill: currentColor;
+    }
+  }
+}

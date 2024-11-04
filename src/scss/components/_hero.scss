@@ -191,6 +191,11 @@
 
   &__swiper-wrapper {
     height: 268px;
+
+    *img {
+      width: 211px;
+      height: 209px;
+    }
   }
 
   &__slide {

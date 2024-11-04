@@ -69,6 +69,11 @@
   &__swiper-wrapper {
     height: 320px;
 
+    *img {
+      width: 282px;
+      height: 282px;
+    }
+
     @include mobile {
       height: 290px;
     }

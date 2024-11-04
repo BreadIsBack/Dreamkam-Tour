@@ -1,36 +1,8 @@
 .second-day {
   padding: 111px 0 80px;
-  position: relative;
   background-image: url('../img/second-day/second-bg.png');
   background-repeat: no-repeat;
   background-position: top right;
-
-  // &::before {
-  //   position: absolute;
-  //   content: '';
-  //   top: 0;
-  //   left: 0;
-  //   right: 0;
-  //   bottom: 0;
-  //   background-image: url('../img/second-day/second-bg.png');
-  //   background-repeat: no-repeat;
-  //   background-size: cover;
-  //   background-position: top right;
-  // }
-
-  &::after {
-    position: absolute;
-    content: '';
-    height: 300px;
-    top: -116px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('../img/first-day/first-day-bg-clouds.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom center;
-  }
 
   @include tablet {
     background-size: 600px;
@@ -47,14 +19,14 @@
     background-image: none;
   }
 
+  &__container-content {
+    padding-left: max(15px, calc((100% - var(--content-width))));
+  }
+
   &__title {
     max-width: 856px;
     position: relative;
     z-index: 10;
-  }
-
-  &__container-content {
-    padding-left: max(15px, calc((100% - var(--content-width))));
   }
 
   &__content {
@@ -76,17 +48,16 @@
 
   &__slider-container {
     display: grid;
-    grid-template-columns: 1fr 478px;
+    grid-template-columns: 1fr minmax(287px, 478px);
     gap: 35px;
+
+    @include medium-tablet {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__swiper-wrapper {
     align-items: flex-start;
-
-    *img {
-      width: 320px;
-      height: 320px;
-    }
   }
 
   &__slide {
@@ -96,5 +67,9 @@
   &__descr {
     margin-bottom: 58px;
     align-self: flex-end;
+
+    @include medium-tablet {
+      margin-bottom: 48px;
+    }
   }
 }

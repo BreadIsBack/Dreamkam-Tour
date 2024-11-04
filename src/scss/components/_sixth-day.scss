@@ -1,60 +1,39 @@
 .sixth-day {
+  padding-top: 90px;
+  position: relative;
+  z-index: 5;
+
+  @include medium-tablet {
+    padding-top: 0;
+  }
 
   &__slider-container {
     display: grid;
-    grid-template-columns: 506px 1fr;
+    grid-template-columns: minmax(288px, 506px) 1fr;
     gap: 136px;
-  }
 
-  &__swiper-wrapper {
-    *img {
-      width: 285px;
-      height: 285px;
+    @include medium-tablet {
+      grid-template-columns: 1fr;
+    }
+
+    @include tablet {
+      gap: 48px;
+    }
+
+    @include mobile {
+      gap: 24px;
     }
   }
 
   &__content {
     color: var(--light-color);
+
+    @include medium-tablet {
+      padding-right: 15px;
+    }
   }
 
   &__content-main {
     margin-bottom: 55px;
-  }
-
-  &__subtitle {
-    margin: 0;
-    margin-bottom: 31px;
-    font-family: 'Montserat';
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 140%;
-  }
-
-  &__extra-list {
-    display: flex;
-    flex-direction: column;
-  }
-
-  &__extra-item {
-    padding: 16px 31px 16px 5px;
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid var(--grey-color);
-    width: 100%;
-  }
-
-  &__extra-subtitle {
-    margin: 0;
-    font-weight: 700;
-    line-height: 150%;
-  }
-
-  &__extra-text {
-    margin: 0;
-    max-width: 226px;
-    opacity: 0.7;
-    font-size: 14px;
-    line-height: 171%;
-    color: var(--grey-color);
   }
 }

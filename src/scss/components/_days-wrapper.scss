@@ -1,3 +1,32 @@
 .days-wrapper {
-  background-color: black;
+  padding: 124px 0 90px;
+  position: relative;
+  background-image: url('../img/wrapper-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 129%;
+
+  @include small-tablet {
+    padding: 0;
+  }
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 50%;
+    background: rgba(0, 0, 0, 0) linear-gradient(180deg, #000 0.15%, rgba(0, 0, 0, 0.57) 52.3%, rgba(0, 0, 0, 0) 92.77%);
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0) linear-gradient(0deg, #000 0.15%, rgba(0, 0, 0, 0.57) 52.3%, rgba(0, 0, 0, 0) 92.77%);
+  }
 }

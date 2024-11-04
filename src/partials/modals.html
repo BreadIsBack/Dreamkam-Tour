@@ -6,7 +6,7 @@
       <div class="modal-booking__content">
         <h2 class="modal-booking__title">Онлайн-заявка</h2>
         <form method="post" action="https://my-json-server.typicode.com/typicode/demo/posts"
-          class="modal-booking__form">
+          class="modal-booking__form modal-booking__form--header">
           <div class="modal-booking__person-info">
             <div class="modal-booking__person-wrapper">
               <h3 class="modal-booking__person-title modal-booking__subtitle">Имя участника</h3>
@@ -32,7 +32,7 @@
               <span class="modal-booking__tariffs-price">79 000 руб</span>
             </label>
             <label class="modal-booking__label modal-booking__tariffs-label">Базовый + проживание
-              <input type="radio" class="modal-booking__input modal-booking__tariffs-input input-reset" name="Тариф"
+              <input checked type="radio" class="modal-booking__input modal-booking__tariffs-input input-reset" name="Тариф"
                 value="Базовый + проживание" required>
               <span class="modal-booking__tariffs-span"></span>
               <span class="modal-booking__tariffs-price">99 000 руб</span>
@@ -58,7 +58,7 @@
                 placeholder="Введите ваш комментарий здесь"></textarea>
             </label>
           </div>
-          <button class="modal-booking__btn btn-reset btn">Отправить заявку</button>
+          <button class="modal-booking__btn modal-booking__btn--header btn-reset btn">Отправить заявку</button>
         </form>
       </div>
     </div>

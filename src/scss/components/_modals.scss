@@ -39,7 +39,7 @@
 }
 
 .modal-booking {
-  max-width: 565px;
+  // max-width: 565px;
 
   &__title {
     margin: 0;
@@ -58,7 +58,9 @@
   }
 
   &__form {
-    padding-bottom: 125px;
+    &--header {
+      padding-bottom: 125px;
+    }
   }
 
   &__subtitle {
@@ -70,6 +72,7 @@
 
   &__person-info {
     margin-bottom: 48px;
+    column-gap: 44px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 
@@ -80,6 +83,7 @@
 
   &__wrapper {
     width: 100%;
+    gap: 44px;
   }
 
   &__person-title {
@@ -94,6 +98,10 @@
       flex-basis: 100%;
       display: flex;
       flex-direction: column;
+    }
+
+    &--price {
+      margin-bottom: 49px;
     }
   }
 
@@ -283,14 +291,27 @@
 
   &__btn {
     padding: 17px 0;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    display: block;
     background-color: var(--orange-color);
     font-size: 18px;
     line-height: 133%;
     color: var(--light-color);
+
+    &--header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    }
+
+    &--price {
+      padding: 8px 32px;
+      margin-left: auto;
+
+      @include mobile {
+        margin: 0 auto;
+      }
+    }
   }
 }
 
