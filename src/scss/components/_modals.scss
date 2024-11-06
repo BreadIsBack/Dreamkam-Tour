@@ -287,6 +287,11 @@
     &:focus {
       outline: 1px solid var(--grey-color);
     }
+
+    &--price {
+      background-color: transparent;
+      color:var(--orange-color);
+    }
   }
 
   &__btn {
@@ -307,6 +312,7 @@
     &--price {
       padding: 8px 32px;
       margin-left: auto;
+      border-radius: 5px;
 
       @include mobile {
         margin: 0 auto;
