@@ -6,6 +6,10 @@
     color: var(--main-color);
     transition: color 0.3s ease-in-out;
 
+    &--review {
+      color: var(--grey-color);
+    }
+
     &:hover {
       color: var(--orange-color);
     }
